@@ -4,17 +4,37 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "husky install",
+    "lint": "eslint --ext .js,.ts,.tsx,.jsx,.vue .",
+    "lint:fix": "eslint --fix --ext .js,.ts,.tsx,.jsx,.vue .",
+    "release": "npm run release-patch && git push --follow-tags origin master && npm publish",
+    "release:first": "standard-version --first-release",
+    "release-major": "standard-version --release-as major",
+    "release-minor": "standard-version --release-as minor",
+    "release-patch": "standard-version --release-as patch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/glory-cli/node-tool-template.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "novlan1",
+  "lint-staged": {
+    "*.{js,ts,vue,jsx,tsx}": [
+      "eslint --fix"
+    ]
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/glory-cli/node-tool-template/issues"
   },
-  "homepage": "https://github.com/glory-cli/node-tool-template#readme"
+  "homepage": "https://github.com/glory-cli/node-tool-template#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "eslint-config-light": "^1.0.4",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.4.0",
+    "standard-version": "^9.3.2"
+  }
 }
