@@ -1,0 +1,45 @@
+{
+  "window.zoomLevel": 1,
+  "editor.tabSize": 2,
+  "editor.fontSize": 12,
+  "editor.formatOnSave": true, //每次保存自动格式化
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "javascript.format.enable": false,
+  "typescript.format.enable": false,
+  // 关闭vetur的js/ts/html的formatter。html用eslint-plugin-vue格式化。
+  // js/ts程序用eslint，防止vetur中的prettier与eslint格式化冲突
+  "vetur.format.defaultFormatter.html": "none",
+  "vetur.format.defaultFormatter.js": "none",
+  "vetur.format.defaultFormatter.ts": "none",
+  "eslint.options": {
+    "extensions": [
+      ".js",
+      ".vue"
+    ]
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "debug.console.fontSize": 11,
+  "markdown.preview.fontSize": 1,
+  "workbench.colorTheme": "Default Light+",
+  "workbench.iconTheme": "vscode-great-icons",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "extensions.ignoreRecommendations": true,
+  "cSpell.userWords": [
+    "Sche",
+    "vuepress",
+    "vuex"
+  ],
+  "stylelint.config": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    }
+  },
+  // "editor.fontWeight": "bold",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "terminal.integrated.fontSize": 11,
+  "terminal.integrated.scrollback": 20000,
+  // "prettier.semi": false,
+}

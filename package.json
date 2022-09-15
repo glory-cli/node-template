@@ -23,9 +23,7 @@
   "keywords": [],
   "author": "novlan1",
   "lint-staged": {
-    "*.{js,ts,vue,jsx,tsx}": [
-      "eslint --fix"
-    ]
+    "*.{js,ts,vue,jsx,tsx}": ["eslint --fix"]
   },
   "license": "ISC",
   "bugs": {
